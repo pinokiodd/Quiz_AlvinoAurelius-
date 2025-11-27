@@ -1,0 +1,125 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  background: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #4b6cff;
+}
+.navbar ul {
+  display: flex;
+  gap: 30px;
+}
+.navbar li {
+  list-style: none;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.navbar li.active,
+.navbar li:hover {
+  background: #4b6cff;
+  color: white;
+}
+
+/* TABS */
+.tab {
+  display: none;
+  padding: 40px;
+  animation: fade .3s ease;
+}
+.tab.active {
+  display: block;
+}
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #4b6cff, #7c97ff);
+  color: white;
+  padding: 80px 40px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+.hero p {
+  opacity: 0.9;
+}
+
+/* GRID PRODUCT */
+.grid {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+.item {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+.item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.item h3 {
+  margin-bottom: 5px;
+}
+.item p {
+  font-weight: bold;
+  color: #4b6cff;
+}
+
+/* SALE */
+.sale-box {
+  background: #ff5252;
+  padding: 25px;
+  border-radius: 14px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* CONTACT */
+#contact p {
+  margin-top: 10px;
+  font-size: 18px;
+}

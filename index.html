@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">ShopX</div>
+        <ul>
+            <li data-tab="home" class="active">Home</li>
+            <li data-tab="products">Products</li>
+            <li data-tab="sale">Sale</li>
+            <li data-tab="contact">Contact</li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="tab active">
+        <div class="hero">
+            <h1>Belanja Lebih Mudah</h1>
+            <p>Produk lengkap, harga ramah kantong.</p>
+        </div>
+
+        <!-- KATEGORI -->
+        <h2 style="margin-top:40px">Kategori Populer</h2>
+        <div class="grid">
+            <div class="item"><img src="fashion.jpg" /><h3>Fashion</h3><p>Lihat Produk</p></div>
+            <div class="item"><img src="elektronik.jpg" /><h3>Elektronik</h3><p>Lihat Produk</p></div>
+            <div class="item"><img src="gaming.jpg" /><h3>Gaming</h3><p>Lihat Produk</p></div>
+            <div class="item"><img src="beauty.jpg" /><h3>Beauty</h3><p>Lihat Produk</p></div>
+        </div>
+
+        <!-- BRAND -->
+        <h2 style="margin-top:40px">Brand Partner</h2>
+        <div class="grid">
+            <div class="item"><img src="nike.png" /><h3>Nike</h3></div>
+            <div class="item"><img src="samsung.png" /><h3>Samsung</h3></div>
+            <div class="item"><img src="sony.png" /><h3>Sony</h3></div>
+            <div class="item"><img src="adidas.png" /><h3>Adidas</h3></div>
+        </div>
+    </section>
+
+    <!-- PRODUK SECTION -->
+    <section id="products" class="tab">
+        <h2>Produk Unggulan</h2>
+        <div class="grid">
+            <div class="item"><img src="headset.jpg" /><h3>Item 1</h3><p>Rp 120.000</p></div>
+            <div class="item"><img src="earphone.jpg" /><h3>Item 2</h3><p>Rp 99.000</p></div>
+            <div class="item"><img src="kok.jpg" /><h3>Item 3</h3><p>Rp 89.000</p></div>
+            <div class="item"><img src="ankle support.jpg" /><h3>Item 4</h3><p>Rp 150.000</p></div>
+            <div class="item"><img src="sepatu futsal.jpg" /><h3>Item 5</h3><p>Rp 199.000</p></div>
+            <div class="item"><img src="kaoskaki.jpg" /><h3>Item 6</h3><p>Rp 79.000</p></div>
+            <div class="item"><img src="sarung tangan.jpg" /><h3>Item 7</h3><p>Rp 110.000</p></div>
+            <div class="item"><img src="sarung jempol.jpg" /><h3>Item 8</h3><p>Rp 140.000</p></div>
+        </div>
+    </section>
+
+    <!-- SALE SECTION -->
+    <section id="sale" class="tab">
+        <h2>Promo Hari Ini</h2>
+        <div class="sale-box">Diskon sampai 50%!</div>
+
+        <h2 style="margin-top:40px">Flash Sale</h2>
+        <div class="grid">
+            <div class="item"><img src="lipstick.jpg" /><h3>Flash Item 1</h3><p>Rp 50.000</p></div>
+            <div class="item"><img src="sunscreen.jpg" /><h3>Flash Item 2</h3><p>Rp 75.000</p></div>
+            <div class="item"><img src="moist.jpg" /><h3>Flash Item 3</h3><p>Rp 60.000</p></div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="tab">
+        <h2>Hubungi Kami</h2>
+        <p>Email: alvinshop@gmail.com</p>
+        <p>Instagram: @alvinshop</p>
+        <p>WhatsApp: 0812-3456-7890</p>
+    </section>
+
+<script>
+const tabs = document.querySelectorAll('nav ul li');
+const sections = document.querySelectorAll('.tab');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        sections.forEach(sec => sec.classList.remove('active'));
+        document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+});
+</script>
+
+</body>
+</html>
